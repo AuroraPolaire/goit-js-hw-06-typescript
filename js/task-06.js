@@ -6,8 +6,7 @@ const onBlurInputCheck = (event) => {
   if (inputData.length < symbolCount) {
     inputField.classList.add("invalid");
   } else {
-    inputField.classList.remove("invalid");
-    inputField.classList.add("valid");
+    inputField.classList.replace("invalid", "valid");
   }
 };
 
