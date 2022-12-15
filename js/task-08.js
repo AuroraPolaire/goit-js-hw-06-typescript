@@ -26,6 +26,10 @@ function onSubmitDataCollect(event) {
 
     console.log(formData);
 
+    //____________ Через new FormData ______________//
+    // const formaData = new FormData(event.currentTarget);
+    // console.log(formaData);
+
     event.currentTarget.reset();
 
     emailPlaceholder.placeholder = "";
@@ -37,7 +41,3 @@ function onSubmitDataCollect(event) {
 }
 
 form.addEventListener("submit", onSubmitDataCollect);
-
-// const body = document.body.children[1];
-// const firstInput = body.children[0].
-// const secondInput = body.children[1].
