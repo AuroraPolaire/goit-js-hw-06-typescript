@@ -12,9 +12,9 @@ const inputValue = (number) => {
 
 const getInputValue = (event) => {
   const amount = inputValue();
-  if (!amount) {
-    return;
-  }
+  // if (!amount) {
+  //   return;
+  // }
   let box = [];
   let boxString = "";
   let size = 30;
