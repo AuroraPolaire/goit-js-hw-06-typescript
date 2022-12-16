@@ -12,9 +12,7 @@ const inputValue = (number) => {
 
 const getInputValue = (event) => {
   const amount = inputValue();
-  if (!amount) {
-    return;
-  }
+
   let box = [];
   let boxString = "";
   let size = 30;
@@ -42,3 +40,9 @@ function onClickResetValue(event) {
 }
 
 destroyButton.addEventListener("click", onClickResetValue);
+
+// Перевірка значення input = 0
+
+// if (!amount) {
+//   return;
+// }
