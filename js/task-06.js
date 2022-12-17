@@ -1,12 +1,12 @@
 const inputField = document.querySelector("#validation-input");
-const symbolCount = inputField.getAttribute("data-length");
+const symbolCount = parseInt(inputField.getAttribute("data-length"));
 
 const onBlurInputCheck = (event) => {
   const inputData = event.currentTarget.value;
-  if (inputData.length < symbolCount) {
-    inputField.classList.add("invalid");
-  } else {
+  if (inputData.length > symbolCount || inputData.length === symbolCount) {
     inputField.classList.replace("invalid", "valid");
+  } else {
+    inputField.classList.add("invalid");
   }
 };
 
