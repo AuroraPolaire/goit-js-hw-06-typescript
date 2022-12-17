@@ -24,23 +24,3 @@ const makeGalleryCard = ({ url, alt }) => {
 
 const gallery = images.map(makeGalleryCard).join("");
 galleryList.insertAdjacentHTML("afterbegin", gallery);
-
-//! with .createElement and .append //
-
-// const galleryList = document.querySelector(".gallery");
-
-// const makeGalleryCard = (image) => {
-//   const { url, alt } = image;
-//   const imageListItem = document.createElement("li");
-//   const imageItem = document.createElement("img");
-
-//   imageItem.src = url;
-//   imageItem.alt = alt;
-
-//   imageListItem.append(imageItem);
-
-//   return imageListItem;
-// };
-
-// const gallery = images.map(makeGalleryCard);
-// galleryList.append(...gallery);
