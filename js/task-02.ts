@@ -1,4 +1,4 @@
-const ingredients = [
+const ingredients: string[] = [
   "Potatoes",
   "Mushrooms",
   "Garlic",
@@ -7,14 +7,18 @@ const ingredients = [
   "Condiments",
 ];
 
-const ingredientsEl = document.querySelector("#ingredients");
+const ingredientsEl = document.querySelector(
+  "#ingredients"
+) as HTMLUListElement;
 
-const makeList = (ingredients) => {
+type MakeList = (ingredients: string[]) => HTMLElement[];
+
+const makeList: MakeList = (ingredients) => {
   return ingredients.map((ingredient) => {
     const listItem = document.createElement("li");
     listItem.classList.add("item");
     listItem.textContent = ingredient;
-
+    console.log(listItem);
     return listItem;
   });
 };
@@ -22,3 +26,5 @@ const makeList = (ingredients) => {
 const list = makeList(ingredients);
 
 ingredientsEl.append(...list);
+
+export {};
